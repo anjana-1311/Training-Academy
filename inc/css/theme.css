@@ -1,0 +1,1223 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+@font-face {font-family:raleway-black; src: url('../font/Raleway-Black.ttf');} 
+@font-face {font-family:raleway-regular; src: url('../font/Raleway-Regular.ttf');}
+@font-face {font-family:raleway-semibold; src: url('../font/Raleway-SemiBold.ttf');} 
+		 
+	 
+/* 
+	=================================
+	=================================
+	DEFAULT CSS
+	=================================
+	=================================
+*/
+*{
+	box-sizing:border-box;
+	position:relative;
+	text-rendering:optimizeLegibility;
+}
+body{
+    margin:0px auto;
+    padding:0px;
+	font-family:"Poppins", 'Raleway', "Open Sans", sans-serif;
+	font-size:15px;
+    color:#0a1826;
+    overflow:hidden;
+    overflow-y:scroll;
+    background:#fff;
+}
+header, footer, menu, nav, article, section, aside{
+	display:block;
+    margin:0px;
+	padding:0px;
+}
+h1, h2, h3, h4, h5, h6, form{
+	margin:0px;
+	padding:0px;
+}
+p, ul, li, a{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+a, span, label, dt, dl, i{
+	display:inline-block;
+}
+a{
+	outline:none;
+	border:none;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+img{
+	outline:none;
+	border:none;
+}
+input[type="submit"], 
+input[type="button"]
+{
+	-webkit-appearance:none;
+   font-family:'Fira Sans', sans-serif;
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+    outline:none;
+    cursor: pointer;
+}
+input, select, textarea, button{
+    outline:none;
+    margin:0px;
+    border:none;
+	font-size:14px;
+	background:#ffffff;
+}
+textarea{resize:none;}
+
+.input{
+    border:1px solid #e3e3e3;
+    padding:12px 14px;
+	border-radius:4px;
+}
+.input:focus{border:1px solid #FE4A55;}
+
+input[type='number']{ -moz-appearance:textfield;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type='number']{
+    -moz-appearance: textfield;
+	appearance: textfield;
+	-webkit-appearance: textfield;
+}
+.wrap{padding-left:0px;}
+.wrap::after{
+    content: " ";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 15px;
+    height: 100%;
+	background: #f5b200;
+}
+.pageContent{padding:20px 25px}
+.pageContent .holder{padding:0px;}
+.wrapper{width:100%; max-width:1170px; margin:0px auto;}
+.holder{
+    width:100%;
+	margin:0px auto;
+    min-height:650px;
+	padding:20px 25px;
+}
+.clr{clear:both;}
+.roundBtn{
+	background:#f5b200;
+	color:#ffffff;
+	
+	font-size:13px;
+	padding:8px 15px;
+
+	box-shadow: none;
+	margin-top:4px;	
+	border-radius:5px;
+}
+.borderBtn{
+	color:#11d28b;
+	font-size:13px;
+	padding:8px 15px;
+	box-shadow: none;
+	margin-top:4px;	
+	border-radius:5px;
+	border: 2px solid #11d28b;
+}
+.borderBtn:hover{opacity:1 !important; }
+.roundBtn, .borderBtn{
+	-o-border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.button{display:inline-block; margin-left:35px; }
+.button .btn{
+	background:#FE4A55;
+	color: #ffffff;
+	font-weight:600; font-size:15px; line-height:18px;
+	padding:12px 20px;
+	border-radius:4px;
+	/* width: 100%; */
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+}
+.button .btn:hover{background:#221638;}
+.button .btnLoader {
+	background:#fe4a55;
+	position:absolute;
+	top: 0px; left: 0px;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border-radius: 5px;
+	cursor: wait;
+}
+.button .btnLoader span.spinLoader{
+	width: 25px;
+	height: 25px;
+	border-width: 4px;
+	top: 7px;
+}
+
+/*
+    https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+    create Custom Check Box and radio Button
+*/
+.card {
+	background: #ffffff;
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 31px -2px #D2CCCC;
+	border-radius:5px;
+	padding:12px;
+	font-size:16px;
+	font-weight:400;
+	margin-bottom:20px;
+	color:#000;
+}
+
+/* ============= For Menu ============= */
+.activeView {
+	-webkit-transform: translate3d(0,0,0)!important;
+	-moz-transform: translate3d(0,0,0)!important;
+	transform: translate3d(0,0,0)!important;
+}
+/*
+.Overlay {
+	background:rgba(0,0,0,0.8);
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:105%;
+	height:105%;
+	z-index:20000;
+}
+*/
+/* ============= SEGMENT CONTROLL */
+.segment {	
+	border:1px solid #dde6eb;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;	
+	overflow: hidden;
+	
+}
+.segment:after{content:""; width:100%; clear:both; display:block;}
+.segment label
+{
+	border-right:1px solid #e6e7e9;
+	width:50%;
+	float:left;
+	text-align:center;
+	background: #ffffff;
+	
+	box-sizing:border-box;
+	
+	cursor:pointer;
+	position:relative;
+	overflow:hidden;
+}
+.segment label.last{border:none;}
+.segment label input
+{
+	position:absolute;
+	visibility:hidden;
+	width:15px!important;
+	left:5px;
+	z-index:1;
+}
+.segment label .selection
+{
+	padding:9px 10px!important;
+	color: #808f9e;
+	display:block;
+	border-radius:2px;
+	
+	-webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.segment label .selection:hover,
+.segment label:hover
+{
+	background:#dee9fa;
+}
+.segment label input:checked ~ .selection,
+.segment label.active
+{
+	background: #023047;
+	color:#ffffff;
+	border-radius: 0px;
+}
+
+/* ============= Custom Checkbox */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox input
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox .checkmark
+{
+    position: absolute;
+    top: 17;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+	border-radius:3px;
+}
+.checkbox:hover input ~ .checkmark
+{
+    background-color: #ccc;
+}
+.checkbox input:checked ~ .checkmark
+{
+    background-color: #174b94;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox input:checked ~ .checkmark:after
+{
+    display: block;
+}
+.checkbox .checkmark:after
+{
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ============= Custom Radio */
+.radioBtn {
+    display: block;
+    position: relative;
+    padding-left: 25px!important;
+    padding-right:0px!important;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.radioBtn input
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.radioBtn .checkmark
+{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radioBtn:hover input ~ .checkmark
+{
+    background-color: #ccc;
+}
+.radioBtn input:checked ~ .checkmark
+{
+    background-color: #f49b01;
+}
+.radioBtn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radioBtn input:checked ~ .checkmark:after
+{
+    display: block;
+}
+.radioBtn .checkmark:after
+{
+    top: 4px;
+	left: 4px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* 
+    #######################
+    ######### switcher Control
+    #######################
+*/
+.switchery
+{
+	color:#ffffff;
+	background:#c4c4c4;
+	border:2px solid #c4c4c4;
+	
+	-webkit-border-radius:45px;
+	-moz-border-radius:45px;
+	-o-border-radius:45px;
+	border-radius:45px;
+	
+	width:100px;
+	height:34px;
+	text-align:center;
+	line-height:30px;
+	position:relative;
+	box-sizing:border-box;
+	padding-left:27px;
+	overflow:hidden;
+	
+	-webkit-box-shadow: inset 0px 0px 0px 0px rgba(96, 192, 95, 1);
+	-moz-box-shadow:    inset 0px 0px 0px 0px rgba(96, 192, 95, 1);
+	box-shadow:         inset 0px 0px 0px 0px rgba(96, 192, 95, 1);
+	
+	-webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;	
+			
+	font-size:13px;
+}
+.switchery label
+{
+	cursor:pointer;
+}
+.switchery span
+{
+	background:#ffffff;
+	
+	-webkit-border-radius:100%;
+	-moz-border-radius:100%;
+	-o-border-radius:100%;
+	border-radius:100%;
+	width:28px;
+	height:28px;
+	position:absolute;
+	top:1px;
+	left:2px;
+	
+	-webkit-transition: -webkit-transform 350ms ease;
+	-moz-transition: -moz-transform 350ms ease;
+	transition: transform 350ms ease;
+	
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.35);
+	box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.35);
+}
+.switchery strong
+{
+	font-weight:normal;
+}
+.switchery.active
+{
+	
+	color:#ffffff;
+	border:2px solid #11d28b;
+	
+	-webkit-box-shadow: inset 0px 0px 0px 50px rgba(17, 210, 139, 1);
+	-moz-box-shadow:    inset 0px 0px 0px 50px rgba(17, 210, 139, 1);
+	box-shadow:         inset 0px 0px 0px 50px rgba(17, 210, 139, 1);
+	
+	
+	padding-right:27px;
+	padding-left:0px;
+}
+.switchery.active span
+{
+	-webkit-transform: translate3d(230%,0,0);
+	-moz-transform: translate3d(230%,0,0);
+	transform: translate3d(230%,0,0);
+}
+
+/* 
+    #######################
+    ######### Table Listing
+    #######################
+*/
+.tableListing
+{
+	background: #ffffff;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 4px;
+	font-size: 14px;
+	
+    margin: 0px auto;
+	margin-bottom:25px;
+}
+.tableListing th a
+{
+	color:#000000;
+}
+.tableListing th
+{
+	padding:15px 13px;
+	text-align:left;
+	vertical-align:top;
+	font-size:14px;
+	font-weight:500;
+	letter-spacing:0.2px;
+	
+	border-bottom: 2px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+}
+.tableListing td
+{
+	padding:15px 13px;
+	color:#1f1f1f;
+	border-bottom:1px solid #ebebeb;
+	vertical-align:top;
+	position:relative;
+	
+	border-right: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+.tableListing tbody tr:nth-child(even)
+{
+	background:rgba(0,0,0,0.02);
+}
+.tableListing tbody tr:hover{background:#fffdf5;}
+
+.tableListing td.actionLinks{ color:#989898;}
+.tableListing td.actionLinks a:first-child{margin-left:0px;}
+.tableListing td.actionLinks a:last-child{margin-right:0px;}
+.tableListing td.actionLinks a{margin:0px 6px 0px 4px;}
+
+
+.btn-group{display:inline-block;}
+.btn-group .btn{
+	background:#fff; 
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow:0px 4px 3px rgba(0,0,0,0.1);
+	border-radius:5px; 
+	color:#01304a;
+	padding:0px 35px 0px 15px;
+	height:35px;
+	line-height:35px;
+	box-sizing:border-box;
+	overflow:hidden;
+	cursor:pointer;
+	
+}
+.btn-group .btn:after{
+	font-family: 'FontAwesome';
+	content: "\f0d7";
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:25px;
+	height:35px;
+	background:#f2f2f2; 
+	text-align:center;
+}
+.btn-group .dropdown{
+	background:#fff;
+	border:1px solid rgba(0,0,0,.15);
+	border-radius:5px;
+	position:absolute;
+	top:35px;
+	right:0px;
+	z-index:100;
+	width:0px;
+	height:0px;
+	opacity:0;
+	overflow:hidden;
+	
+	box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+}
+.btn-group .dropdown a{padding:8px 15px; display:block;}
+.btn-group .dropdown a:hover{background:#f3f3f3}
+.btn-group .dropdown .divider{background: #e9ecef; width:100%; height:2px; padding:0px;}
+.btn-group:hover .btn{background:#01304a; color:#fff;}
+.btn-group:hover .btn:after{background:#01304a;}
+.btn-group:hover .dropdown{height:auto; width:150px; opacity:1;}
+
+/* 
+    #######################
+    ######### Ul Listing
+    #######################
+*/
+.ulListing ul li
+{
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex;
+	
+    border-bottom: 1px solid #ededed;
+    position: relative;
+    
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+.ulListing ul li.title
+{
+    
+    border-top: 1px solid #ededed;
+    border-bottom-width: 2px;
+    font-weight: bold;
+}
+.ulListing ul li.title .col{padding: 10px 10px;}
+.ulListing .col
+{
+    padding: 15px 10px;
+    vertical-align: top;
+    float: left;
+    word-wrap: break-word;
+}
+
+.ulListing ul li.row:hover
+{
+    background: #fdfffe;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(43, 43, 43, 0.15);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(43, 43, 43, 0.15);
+    box-shadow:         0px 0px 5px 0px rgba(43, 43, 43, 0.15);
+    z-index: 10;
+}
+.ulListing ul li .actionLinks
+{
+    color: #d3d3d3;
+}
+
+/* 
+    #######################
+    ######### Listing Pagging
+    #######################
+*/
+.paggingMain
+{
+	text-align:center;
+	padding:10px 0px 10px 0px;
+	position:relative;
+	height:47px;
+	margin:20px 0px;
+}
+.paggingMain .pagingLeft
+{
+	position:absolute;
+	top:24px;
+	left:0px;
+	font-size:13px;
+}
+.paggingMain .pagingright
+{
+	position:absolute;
+	top:13px;
+	right:0px;
+	font-size:13px;
+}
+.paggingMain .pagginMiddle
+{
+	padding:0px 50px;
+	text-align:center;
+}
+.paggingMain .pagginMiddle .viewer
+{
+	display:inline-block;
+	background:#ffffff;
+	border:1px solid #e3e3e3;
+	border-bottom:2px solid #e3e3e3;
+}
+.paggingMain .pagginMiddle .viewer a:hover
+{
+	background-color:#f2f2f2!important;
+}
+.paggingMain .pagginMiddle .viewer a,
+.paggingMain .pagginMiddle .viewer span
+{
+	padding:11px 10px 10px 10px;
+	width:22px;
+	height:22px;
+	border-right:1px solid #e3e3e3;
+	float:left;
+	text-align:center;
+	overflow:hidden;
+	box-sizing: initial;
+}
+.paggingMain .pagginMiddle .viewer span.awhite
+{
+	background:#e9e9e9;
+	color:#000000;
+}
+.paggingMain .pagginMiddle .viewer a.next,
+.paggingMain .pagginMiddle .viewer a.last,
+.paggingMain .pagginMiddle .viewer a.prev,
+.paggingMain .pagginMiddle .viewer a.first,
+.paggingMain .pagginMiddle .viewer span.firstDisable,
+.paggingMain .pagginMiddle .viewer span.prevDisable,
+.paggingMain .pagginMiddle .viewer span.nextDisable,
+.paggingMain .pagginMiddle .viewer span.lastDisable
+{
+	background:url("../../images/pagging.png") no-repeat;
+	text-indent:-5000px;
+}
+.paggingMain .pagginMiddle .viewer a.next{	background-position:-174px 17px;}
+.paggingMain .pagginMiddle .viewer a.last{	background-position:-242px 17px;}
+
+.paggingMain .pagginMiddle .viewer span.nextDisable{	background-position:-172px -45px;}
+.paggingMain .pagginMiddle .viewer span.lastDisable{	background-position:-242px -45px;}
+
+
+.paggingMain .pagginMiddle .viewer a.prev { background-position:-52px 17px; }
+.paggingMain .pagginMiddle .viewer a.first{	background-position:17px 17px;  }
+
+.paggingMain .pagginMiddle .viewer span.prevDisable{ background-position:-52px -45px;}
+.paggingMain .pagginMiddle .viewer span.firstDisable{ background-position:17px -45px;}
+/* 
+    #######################
+    ######### Listing Filter By
+    #######################
+*/
+.filterBy
+{
+	font-size:13px;
+	padding:7px 0px;
+}
+.filterBy label
+{
+	font-weight:bold;
+	margin-right:10px;
+	display:inline-block;
+}
+.filterBy .right
+{
+	float:right;
+	width:50%;
+	text-align:right;
+}
+.filterBy .right a
+{
+	color:#5c5c5c;
+}
+.filterBy .right a:visited,
+.filterBy .right a:active,
+.filterBy .right a:hover,
+.filterBy .right a.active
+{
+	 color:#000000;
+	 text-decoration:underline;
+}
+
+/* 
+    #######################
+    ######### FROM
+    #######################
+*/
+.card.rightPanel{padding:18px;}
+.form .validation{
+    height: 20px;
+    font-size: 12px;
+    color: red;
+	text-align:left;
+}
+.form li .label{font-size:15px; text-align: left;}
+.form li .label span {
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 13px;
+    right: 5px;
+}
+/*
+.form
+{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.form li .label
+{
+    width: 30%;
+    float: left;
+    text-align: right;
+    position: relative;
+    padding: 10px 15px 24px 0px;
+}
+.form li .label span
+{
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 13px;
+    right: 5px;
+}
+.form li .value
+{
+    width: 70%;
+    float: right;
+    position: relative;
+    padding-left: 3px;
+}
+.form li .value .input
+{
+   width: 80%;
+   height: 37px;
+}
+.form li .value .validation
+{
+    clear: both;
+}
+
+*/
+
+.formButton {
+    text-align: center;
+    padding: 25px 0px; 
+    border-top: 1px solid #e8e8e8;
+    margin-top: 40px;
+    position: relative;
+}
+.formButton input
+{
+    margin: 0px 5px;
+}
+.formButton input:hover
+{
+    opacity:0.7;
+}
+.formButton a {
+    position: absolute;
+    top: 39px;
+    right: 0px;
+    text-decoration: underline;
+}
+
+/* 
+    #########################
+    ######### Amenities List
+    #########################
+*/
+.propertyAmenitiesList label
+{
+	height:35px;
+}
+.propertyAmenitiesList label i.ico
+{
+	background-image:url("../../images/remax_aminites.png");
+	/* background-color:#dedede; */
+	background-repeat:no-repeat;
+	background-size:500px 395px;
+	position:absolute;
+	top:0px;
+	left:18px;
+}
+.propertyAmenitiesList label i.ico
+{
+	width:35px;
+	height:35px;
+	vertical-align:middle;
+}
+i.lift, i.lifts				{background-position:-17px -317px;}
+i.park						{background-position:-19px -257px;}
+i.maintenancestaff			{background-position:-96px -311px;}
+i.visitorstaff, i.visitorparking{background-position:-174px -258px;}
+i.waterstorage				{background-position:-96px -11px;}
+i.fengshuivastucomplaint, 
+i.fengshuivaastucompliant
+{
+	background-position:-176px -210px;
+}
+i.intercomfacility			{background-position:-175px -61px;}
+i.securityfirealarm			{background-position:-176px -107px;}
+i.wastedisposal				{background-position:-174px -11px;}
+i.privategardenterrace		{background-position:-176px -161px;}
+i.rainwaterharvesting		{background-position:-95px -209px;}
+i.pipedgas					{background-position:-95px -58px;}
+i.waterpurifier				{background-position:-96px -257px;}
+i.swimmingpool				{background-position:-18px -209px;}
+i.securitypersonnel			{background-position:-96px -115px;}
+i.fitnesscentregym			{background-position:-18px -164px;}
+i.highspeedinternet  		{background-position:-253px -62px;}
+
+
+i.banquethall				{background-position:-254px -162px;}
+i.atm						{background-position:-253px -12px;}
+i.clubhousecommunitycenter	{background-position:-19px -11px;}
+i.barlounge					{background-position:-332px -11px;}
+i.centrallyairconditioned	{background-position:-253px -211px;}
+i.childrenplayarea			{background-position:-328px -107px;}
+
+/* Detai lPage */
+.propertyDetail .aboutProperty .propertyAminities label span.aminIco i
+{
+	background-image:url("../../images/remax_aminites.png");
+	background-color:#fafafa;
+	background-repeat:no-repeat;
+	background-size:500px 395px;
+	width:35px;
+	height:35px;
+}
+
+
+/* 
+    #######################
+    ######### Model Box
+    #######################
+*/
+/* .overlay {
+	background:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:999;
+}*/
+
+.model {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:1000;
+}
+.model .modelWrapper {
+	background:#ffffff;
+	width:550px;
+	margin:12% auto 0px auto;
+	
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+}
+.model .modelWrapper h4
+{
+	background: #082d48;
+	color:#ffffff;
+	padding:15px;
+	font-size:16px;
+	position:relative;
+}
+.model .modelWrapper a.close
+{
+	color:#ffffff;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index: 10;
+	font-size:28px;
+	transform:scale(1, 0.9);
+	padding:0px 10px;
+	height:52px;
+	line-height:50px;
+	display:inline-block;
+	opacity:0.8;
+}
+.model .modelWrapper .texts,
+.model .modelWrapper .content
+{
+	padding:20px;
+}
+.model .modelWrapper .modelAction
+{
+	background:#f3f3f3;
+	padding:15px;
+	font-size:14px;
+	color:#999999;
+	text-align:center;
+}
+.model .modelWrapper .modelAction a
+{
+	color:#ffffff;	
+	margin:0px 5px;
+}
+.model .modelWrapper .modelAction a.cancel
+{
+	color:#0164ca;
+	background:#ffffff;
+}
+
+/*
+	======================
+	#Page = Add Section Form
+	======================
+*/
+.sectionForm{}
+.sectionForm
+{
+	padding:2% 0% 2%;
+}
+.sectionForm .rowTitle
+{
+	width:32%;
+	float:left;
+	padding-top:20px;
+}
+.sectionForm .rowTitle h2
+{
+	font-size:18px;
+	font-weight:400;
+	padding-bottom:5px;
+}
+.sectionForm .rowTitle p
+{
+	font-size:14px;
+	color:#5e6d7d;
+	line-height:22px;
+	padding-bottom:5px;
+}
+.sectionForm .rowValue
+{
+	width:62%;
+	float:right;
+	padding:25px 25px 0px;	
+	background:#ffffff;
+	border:1px solid #e0e5ec;
+}
+.sectionForm .rowValue .form li .label{width:29%; text-align:left; padding-right: 10px;}
+.sectionForm .rowValue .form li .value{width:71%;}
+.sectionForm .rowValue .form li .value .input{width:100%;}
+.sectionForm .addItemButton{text-align:center; padding:50px 0px 30px;}
+.sectionForm .rowValue .form li .value .example	{ font-size: 14px; color: #a2a2a2; }
+.sectionForm .splitLabel{padding-top:9px;}
+.sectionForm .splitLabel label
+{
+	width:50%; float:left; padding-right:10px;
+	margin-bottom:15px;
+}
+.sectionForm .rowValue .checkbox .checkmark
+{
+	border: 2px solid #b9bbbf;
+	background: #ffffff;
+}
+.sectionForm  .checkbox .checkmark:after	
+{ 
+	display: block; 
+	border-width: 0 2px 2px 0 !important;
+	border: solid #b4b7bb;
+	top: 0px;
+	left: 4px;
+}
+.sectionForm  .checkbox input:checked ~ .checkmark
+{
+    border-color: #f49b01;
+}
+.sectionForm  .checkbox input:checked ~ .checkmark:after	{ border-color: #f49b01; }
+
+.sectionForm.sectionBtn{margin-top: -25px;}
+.sectionForm.sectionBtn .rowValue{padding: 15px;}
+
+/*
+	======================
+	#Section = Upload Image Control
+	======================
+*/
+.uploadSectionImage{padding-bottom:35px;}
+.uploadSectionImage:after{content:" "; clear:both; display:block;}
+.uploadSectionImage .imageHolder
+{
+	background:#f4f4f4;
+	height:200px;
+	width:200px;
+	display:block;
+	overflow:hidden;
+	line-height:200px;
+	vertical-align:middle;
+	position: relative;
+	float:left;	
+}
+.uploadSectionImage .imageHolder a
+{
+	color: #ffffff;
+	font-size: 20px;
+	height: 22px;
+	width: 22px;
+	line-height: 21px;
+	text-align: center;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index:100;
+	background: #ff0000;
+	
+	-o-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}
+.uploadSectionImage .imageHolder span	{ width: 100%; text-align: center; }
+.uploadSectionImage .imageHolder img
+{
+	max-width:100%;
+	vertical-align: middle;
+}
+.uploadSectionImage .avtarActions
+{	
+	float:left;
+	padding:15px 0px 0px 40px;
+	width:60%;	
+}
+.uploadSectionImage .avtarActions label
+{
+	font-size:18px;
+	font-weight:normal;
+	padding-bottom:5px;
+}
+.uploadSectionImage .avtarActions p
+{
+	font-size:12px;
+	color:#a09696;
+	padding-bottom:20px;
+}
+.uploadSectionImage .avtarActions span.fileBtn {
+	text-align:center;
+	margin:0px auto;
+	overflow:hidden;
+	background:#253746;
+	border-radius:45px;
+	padding:8px 20px;
+	color:#ffffff;
+	cursor:pointer;
+	position:relative;
+}
+.uploadSectionImage .avtarActions span.fileBtn:hover
+{
+	background:#3a576f;
+}
+.uploadSectionImage .avtarActions span.fileBtn input
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+	z-index:2;
+	opacity:0;
+}
+
+/*
+	=======================
+	ringLoader
+	=======================
+*/
+.spinLoader
+{
+  border: 16px solid #221638;
+  border-radius:50%;
+  border-top:16px solid #ffffff;
+  width:120px; height:120px;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 0.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.spinLoader.small{ width:22px; height:22px; border-width:4px; }
+
+/* ====== */
+.errorForAll
+{
+	background:#fff5f5;
+	border:1px solid #f5abab;
+	padding:10px;
+	font-size:14px;
+	margin-bottom: 25px;
+}
+.errorForAll label{display:block; font-weight:bold; padding-bottom:5px;}
+.errorForAll strong{margin-right:5px;}
+
+/* ====== */
+.ui-autocomplete{
+	z-index: 1000!important;
+    max-height: 150px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.ui-autocomplete li{ border-bottom:1px solid rgba(0,0,0,0.03); padding:10px; }
+
+
+.dateTime{ display: inline-block; border-radius: 4px}
+.dateTime input{width: 100%; padding-right: 35px; background: none; z-index: 1000;}
+.dateTime a{
+	position: absolute; 
+	top: 0px; right: 0px; z-index: 0; 
+	width: 35px; height: 35px; line-height: 35px;
+	text-align: center; 
+}
+.dateTime a:after{ font-family: "fontAwesome";  }
+.dateTime a.date:after{content: "\f073";}
+.dateTime a.time:after{content: "\f017";}
+
+/*  ===== Controll 3 */
+.multiSuggestion
+{
+	vertical-align:top;
+	background:#f4f4f4;
+	border-radius:4px;
+}
+.multiSuggestion .input
+{
+	width:100%!important;
+}
+.multiSuggestion .selectedValue label
+{
+	background:#ffffff;
+	border-radius:45px;
+	padding:8px 40px 8px 15px;
+	margin:10px 5px;
+	font-size:13px;
+	position:relative;
+}
+.multiSuggestion .selectedValue label strong{font-weight:normal;}
+.multiSuggestion .selectedValue label a
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:33px;
+	padding:0px 10px;
+	line-height:30px;
+}
+.multiSuggestion .selectedValue label a:before
+{
+	font-family:"FontAwesome";
+	content:"\f00d";
+}
+
+
+
